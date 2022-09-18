@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+
+  event-service-postgres:
+    image: 'postgres'
+    container_name: 'events-storage'
+    volumes:
+      - storage-data:/var/lib/postgresql/data
+      - ./storage/:/var/lib/postgresql/scripts
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: events-storage
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+  
+  event-service-api:
+    build: ./api
+    container_name: 'events-api'
+    environment:
+      - DB_CONTAINER=storage
+    ports:
+      - 8080:8080
+    links:
+      - event-service-postgres
+
+  event-service-ui:
+    build: ./events-ui
+    container_name: 'events-ui'
+    ports:
+      - 3000:3000
+    links:
+      - event-service-api
+
+
+volumes:
+  storage-data:
+    external: true

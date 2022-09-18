@@ -1,0 +1,16 @@
+{
+  "name": "event-service-api",
+  "version": "1.0.0",
+  "description": "Simple API for event creation service.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mateusz Szałowski <mateusz.sz@protonmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "pg": "^8.8.0"
+  }
+}
