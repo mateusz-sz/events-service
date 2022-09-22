@@ -4,7 +4,7 @@ CREATE DATABASE IF NOT EXISTS events-storage;
 CREATE TABLE IF NOT EXISTS users (
   id          SERIAL PRIMARY KEY,
   first_name  VARCHAR(28) NOT NULL,
-  surname     VARCHAR(28) NOT NULL,
+  last_name     VARCHAR(28) NOT NULL,
   email       VARCHAR(64) NOT NULL
 );
 
