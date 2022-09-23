@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import background from './assets/main-background.svg';
+import { createNewEvent } from './apiService';
+import Form from './components/Form/Form';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='container'>
+        <header>
+          <h1>Create new event</h1>
+          <h3>Simple demonstration app for BrainHub recruitment process</h3>
+        </header>
+
+        <Form onCreateNewEvent={createNewEvent} />
+      </div>
+      <img className='background-circle' src={background} alt='' />
+    </>
   );
 }
 
