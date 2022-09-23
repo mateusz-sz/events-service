@@ -51,7 +51,7 @@ const createEvent = async (req, res) => {
     const { id: userId } = await userService.addUser(firstName, lastName, email);
     const results = await pool.query(queries.addEvent, [userId, eventDate]);
 
-    res.status(201).send({ message: `Event created successfully with id: ${results.rows[0].id}` });
+    res.status(201).send({ message: 'Event created successfully.' });
 
   } catch (e) {
     res.status(500).send({ message: 'Error. Could not create a new event.' });

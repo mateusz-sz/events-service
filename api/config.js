@@ -10,6 +10,9 @@ const config = {
     password: process.env.DB_PASSWORD,
     name: process.env.DB_NAME,
   },
+  ui: {
+    origin: 'http://localhost:3000',
+  }
 }
 
 module.exports = config;
