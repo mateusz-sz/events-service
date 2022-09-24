@@ -12,7 +12,7 @@ In order to setup the app you have to have `docker` installed with its `docker c
 ### Download the source code
 Clone the repository with:
 ```
-git clone
+git clone git@github.com:mateusz-sz/events-service.git
 ```
 
 ### Setup containers
