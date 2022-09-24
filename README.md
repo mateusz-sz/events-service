@@ -36,6 +36,7 @@ This should setup the database, tables and relations between them.
 
 Now everything should be working.
 The frontend React app is listening on `localhost:3000`. From there you can create events.
+The Node.js backend app is listening on `localhost:8080` and the database on `localhost:5432`.
 
 # Running tests
 
