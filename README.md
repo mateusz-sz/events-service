@@ -17,7 +17,7 @@ git clone git@github.com:mateusz-sz/events-service.git
 
 ### Setup containers
 ```
-cd event-service && docker compose up --detach --build
+cd events-service && docker compose up --detach --build
 ```
 
 ### Setup database
